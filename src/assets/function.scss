@@ -19,7 +19,7 @@
 @mixin font ($family, $url, $weight) {
   @font-face {
     font-family: "#{$family}";
-    src: url("/fonts/#{$url}.woff2") format("woff2"), url("/fonts/#{$url}.woff") format("woff");
+    src: url("/fonts/#{$url}.woff") format("woff");
     font-weight: $weight;
     font-style: normal;
     font-display: swap;

@@ -204,10 +204,12 @@ export default {
 	font-weight: 700;
 	line-height: 130%;
 	letter-spacing: 2.4px;
+	text-transform: uppercase;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	z-index: 0;
 	color: $text-color-1;
 	background: $special-color;
 	border: none;
@@ -215,29 +217,36 @@ export default {
 	margin: 0;
 	overflow: hidden;
 	cursor: pointer;
+	transition-property: background, translate;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
 	@include mobile {
 		text-transform: uppercase;
 		letter-spacing: 0.5px;
 		margin: 19px 0 0 0;
 	}
 	@media (min-width: 1024px) {
+		&:hover {
+			background: black;
+		}
 		&::before {
 			content: '';
 			width: 100%;
-			height: 60px;
+			height: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: -1;
 			translate: -100% 0;
+			color: #ffffff;
 			background: black;
-			mix-blend-mode: color-burn;
 			transition-property: translate;
 			transition-duration: 300ms;
 			transition-timing-function: ease-in-out;
 		}
 		&:hover::before {
-			mix-blend-mode: color-burn;
 			translate: 0 0;
+			color: #ffffff;
 			background: black;
 		}
 	}

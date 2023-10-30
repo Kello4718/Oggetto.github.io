@@ -160,13 +160,14 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	z-index: 0;
 	color: $text-color-1;
 	background: $special-color;
 	border: none;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
-	transition-property: background, mix-blend-mode, translate;
+	transition-property: background, translate;
 	transition-duration: 300ms;
 	transition-timing-function: ease-in-out;
 	cursor: pointer;
@@ -177,6 +178,9 @@
 		display: none;
 	}
 	@media (min-width: 1024px) {
+		&:hover {
+			background: black;
+		}
 		&::before {
 			content: '';
 			width: 140px;
@@ -184,16 +188,17 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: -1;
 			translate: -100% 0;
+			color: #ffffff;
 			background: black;
-			mix-blend-mode: color-burn;
 			transition-property: translate;
 			transition-duration: 300ms;
 			transition-timing-function: ease-in-out;
 		}
 		&:hover::before {
-			mix-blend-mode: color-burn;
 			translate: 0 0;
+			color: #ffffff;
 			background: black;
 		}
 	}
