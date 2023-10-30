@@ -1,0 +1,74 @@
+@import "./assets/colors.scss";
+@import "./assets/viewports.scss";
+@import "./assets/function.scss";
+
+@include font("Helvetica UltraLight", "Helvetica-UltraLight", 200);
+@include font("Helvetica Light", "Helvetica-Light", 300);
+@include font("Helvetica Regular", "Helvetica-Regular", 400);
+@include font("Helvetica Medium", "Helvetica-Medium", 500);
+@include font("Helvetica Bold", "Helvetica-Bold", 700);
+@include font("HelveticaNeueCyr Regular", "HelveticaNeueCyr-Regular", 400);
+@include font("HelveticaNeueCyr Black", "HelveticaNeueCyr-Black", 900);
+
+.html {
+	height: 100%;
+	font-family: "Helvetica Light", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 162.5%;
+	font-weight: 300;
+	font-style: normal;
+	scroll-behavior: smooth;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.body {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	margin: 0;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	padding: 0;
+	margin: -1px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color-1);
+}
+
+img {
+	border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
