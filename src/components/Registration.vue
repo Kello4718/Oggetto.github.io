@@ -150,9 +150,6 @@ export default {
 	&:focus {
 		outline: none;
 	}
-	@include tablet {
-		color: $special-color;
-	}
 	@include mobile {
 		color: $text-color-2;
 		padding: 4px 0 21px;
@@ -165,7 +162,6 @@ export default {
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 130%;
-	letter-spacing: -1px;
 	position: absolute;
 	top: 0;
 	left: 0;
